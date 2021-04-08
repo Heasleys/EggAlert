@@ -20,7 +20,7 @@ var observer = new MutationObserver(function(mutations, observer) {
         for (const element of mutation.addedNodes) {
           if (element.querySelector && element.querySelector('img[src^="competition.php"][src*="step=eggImage"][src*="access_token="]')) {
             var image = element.querySelector('img[src^="competition.php"][src*="step=eggImage"][src*="access_token="]');
-            if ($('img[src^="competition.php"][src*="step=eggImage"][src*="access_token="]').parent('a[class*="-popup-link"').length > 0) {
+            if ($('img[src^="competition.php"][src*="step=eggImage"][src*="access_token="]').parent('a[class*="-popup-link"]').length > 0) {
             image.onload = function() {detectEgg(this);}
             }
           }
